@@ -1,0 +1,534 @@
+/* ================ GOGGLE FONT =============== */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap');
+
+/* ============== CSS VARIABLE ============= */
+
+:root{
+    
+    /* ===== COLORS ======== */
+    --white: #fff;
+    --Dark-red: #ff004f;
+    /* ===== FONT AND TYPOGRAPHY ===== */
+    --roboto-font: 'Roboto', sans-serif;
+    --mono-font: 'Roboto Mono', MonoSpace;
+
+    --fs-h1: 2.75rem;
+    --fs-h2: 2.25rem;
+    --fs-base: 1.125rem;
+    --fs-sm: 0.875rem;
+    --fs-lg: 1rem;
+    --fs-xs: 0.75rem;
+    /* ======= FONT WEIGHT ====== */
+    --medium: 500;
+    --semi-bold: 600;
+    --bold: 700;
+}
+
+/* ======== BASE ============= */
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html{
+	scroll-behavior: smooth;
+}
+
+body,
+button,
+input,
+textarea{
+	font-family: var(--roboto-font);
+	font-size: var(--fs-base)
+}
+
+body{
+	background-color: var(--bg-color);
+	color: var(--text-color);
+	line-height: 1.5rem;
+}
+
+h1,
+h2,
+h3,
+h4{
+	font-family: var( --mono-font);
+	font-weight: var(--bold);
+}
+
+ul{
+	list-style: none;
+}
+
+a{
+	text-decoration: none;
+}
+
+button{
+	border: none;
+	outline: none;
+	cursor: pointer;
+	background: none;
+}
+
+img{
+	max-width: 100%;
+	height: auto;
+}
+
+textarea,
+input{
+	border: 1px solid rgba(0, 0, 0, 0.5);
+	outline: none;
+}
+
+.container{
+	padding: 4px 2%;
+}
+
+
+/* ================ Header =============== */
+#header{
+	background: url("../images/Mr Emmanuel.jpg");
+	height: 100vh;
+	width: 100%;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	transition: 0.3s;
+}
+
+nav{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+.logo a{
+	color: var(--white);
+	padding-right: 40px;
+	margin-right: 40px;
+	font-weight: var(--bold);
+	font-size: var(--fs-h1);
+}
+
+nav ul{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+nav ul li{
+	display: inline-block;
+	margin: 17px 50px;
+}
+
+nav ul li a{
+	align-items: flex-end;
+	color: var(--white);
+	font-weight: var(--bold);
+	font-size: var(--fs-h2);
+}
+
+.ri-close-fill,
+.ri-menu-line{
+	display: none;
+}
+
+.header-text{
+	margin-top: 9rem;
+	padding: 30px 12px;
+	color: var(--white);
+}
+
+.header-text p{
+	font-size: var(--fs-h2);
+}
+
+.header-text p strong{
+	font-size: var(--fs-h1);
+	margin-top: 9px;
+}
+
+.autotype{
+	color: var(--Dark-red);
+	font-weight: var(--bold);
+}
+
+.btn{
+	color: var(--white);
+	padding: 13px 53px;
+	background: var(--Dark-red);
+	border-radius: 5px;
+	transition: 0.5s;
+}
+
+.btn:hover{
+	background: transparent;
+	border: 1px solid var(--Dark-red);
+	color: var(--Dark-red);
+}
+
+/* ============ SCROLL HEADER =========== */
+.scroll-header{
+	position: fixed;
+	background-color: var(--white);
+	backdrop-filter: blur(5px);
+}
+
+/* ================ CONTACT =============== */
+#contact{
+	margin-top: 7rem;
+}
+
+.contact-title,
+.contact-word{
+	text-align: center;
+}
+
+.contact-title{
+	font-weight: var(--semi-bold);
+	
+}
+
+.contact-word{
+	color: var(--Dark-red);
+	position: relative;
+	padding-top: 9px;
+}
+
+.contact-word::before{
+	content: "";
+	position: absolute;
+	width: 25px;
+	background: #000;
+	height: 3px;
+	top: 20px;
+	left: 43.764%;
+}
+
+.contact-word::after{
+	content: "";
+	position: absolute;
+	width: 25px;
+	height: 3px;
+	top: 20px;
+	background: #000;
+
+}
+
+.row{
+	display: flex;
+	column-gap: 5rem;
+	gap: 3rem;
+	justify-content: space-between;
+	padding-top: 2rem;
+}
+
+.row-1{
+	flex-basis: 60%;
+	
+}
+
+.row-2{
+	flex-basis: 50%;
+}
+
+.contact-head{
+	padding-bottom: 5px;
+	font-weight: var(--medium);
+}
+
+.contact-description{
+	padding: 1rem;
+	font-size: 17px;
+}
+
+.social{
+   display: flex;
+   gap: 25px;
+
+}
+
+.social i{
+	font-size: 28px;
+	color: var(--Dark-red);
+}
+
+.social p{
+	font-weight: 150;
+	 padding-bottom: 9px;
+	 font-size: 17px;
+}
+
+
+.row-2{
+  font-weight: var(--semi-bold);
+}
+
+.row-2 form input:placeholder{
+	padding-top: 3rem;
+}
+
+.row-2 form input{
+   border-radius: 7px;
+   background: var(--white);
+   height: 3.254rem;
+   padding: 10px 27px;
+}
+
+.form-textarea-2{
+   width: 100%;
+   background: rgba(0 0 0 0 /43%);
+   border-radius: 7px;
+   padding: 10px;
+   height: 5.5rem;
+}
+
+.form-textarea-1{
+	width: 100%;
+	margin: 11px 3px;
+	height: 3.554rem;
+	background: var(--white);
+	border-radius: 7px;
+	padding: 10px;
+}
+
+.btn-2{
+	padding: 10px 11px;
+}
+
+.copyright{
+	margin-top: 18rem;
+	background: #000;
+	width: 100%;
+	height: 4rem;
+	text-align: center;
+	color: #fff;
+	padding-top: 15px;
+	letter-spacing: 2px;
+	font-weight: 150;
+}
+
+.copyright a{
+	color: var(--Dark-red);
+	
+}
+
+.copyright a:hover{
+	text-decoration: underline;
+}
+
+@media  only screen and (max-width: 1200px){
+	.contact-word::before{
+	  left: 42.964%;
+     }
+
+    .contact-word::after{
+      right: 42.995%;
+     }
+}
+
+@media  only screen and (max-width: 1076px){
+	.contact-word::before{
+	  left: 42.164%;
+     }
+
+    .contact-word::after{
+      right: 42.195%;
+     }
+
+     .row-2 form input{
+     	width: 100%;
+     }
+}
+
+@media  only screen and (max-width: 1076px){
+	.contact-word::before{
+	  left: 42.164%;
+     }
+
+    .contact-word::after{
+      right: 42.195%;
+     }
+
+     .row-2 form input{
+     	width: 100%;
+     }
+}
+
+@media  only screen and (max-width: 950px){
+	.contact-word::before{
+	  left: 41.164%;
+     }
+
+    .contact-word::after{
+      right: 41.195%;
+     }
+
+     .row-2 form input{
+     	width: 100%;
+     }
+}
+
+@media  only screen and (max-width: 804px){
+	.contact-word::before{
+	  left: 40.164%;
+     }
+
+    .contact-word::after{
+      right: 40.195%;
+     }
+
+     .row-2 form input{
+     	width: 100%;
+     }
+
+     nav ul li a{
+     	display: block;
+     	align-items: center;
+     	text-align: center;
+     	flex-direction: column;
+		row-gap: 2.125rem;
+		text-align: center;
+     }
+
+	nav .ri-menu-line{
+		display: block;
+		font-size: 35px;
+		color: var(--white);
+	}
+
+	nav .ri-close-fill{
+		display: block;
+		font-size: 35px;
+        color: var(--white);
+	}
+
+	nav ul{
+		background: #000;
+		position: fixed;
+		top: 0;
+		right: -100%;
+		width: 100%;
+		height: 100vh;
+		padding-top: 50px;
+		z-index: 2;
+		transition: right 0.5s;
+		display: inline-block;
+		padding-top: 14rem;
+	}
+
+	nav ul li{
+		display: block;
+		margin: 25px;
+	}
+
+	nav ul .ri-close-fill{
+		position: absolute;
+		top: 25px;
+		left: 25px;
+		cursor: pointer;
+	}
+
+	.row-1{
+     	display: block;
+     	flex-basis: 100%;
+     	row-gap: 2rem;
+     }
+
+     .row{
+     	display: block;
+     	row-gap: 2rem;
+     	column-gap: 2rem;
+     	gap: 2rem;
+     }
+}
+
+@media  only screen and (max-width: 750px){
+	.contact-word::before{
+	  left: 39.164%;
+     }
+
+    .contact-word::after{
+      right: 39.195%;
+     }
+
+     .row-2 form input{
+     	width: 100%;
+     }
+}
+
+@media  only screen and (max-width: 650px){
+	.contact-word::before{
+	  left: 37.564%;
+     }
+
+    .contact-word::after{
+      right: 37.595%;
+     }
+
+     .row-2 form input{
+     	width: 100%;
+     }
+}
+
+@media  only screen and (max-width: 570px){
+	.contact-word::before{
+	  left: 35.064%;
+     }
+
+    .contact-word::after{
+      right: 35.095%;
+     }
+
+     .row-2 form input{
+     	width: 100%;
+     }
+}
+
+@media  only screen and (max-width: 476px){
+	p{
+		font-size: 14px;
+	}
+	.contact-word::before{
+	  left: 33.164%;
+     }
+
+    .contact-word::after{
+      right: 33.195%;
+     }
+
+     .row-2 form input{
+     	width: 100%;
+     }
+
+     #header{
+     	height: 120%;
+     }
+
+     #contact{
+     	margin-top: 10rem;
+     }
+
+     .contact-description{
+     	width: 100%;
+     }
+}
+
+@media  only screen and (max-width: 350px){
+	.contact-word::before{
+	  left: 31.164%;
+     }
+
+    .contact-word::after{
+      right: 31.195%;
+     }
+
+     .row-2 form input{
+     	width: 100%;
+     }
+}
